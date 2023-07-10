@@ -29,3 +29,10 @@ print(count_nucleotides('AGACGTCTCGTTCTAGAAGGTCGACGCCACAAGCTCTAATGCAGCGGTGAT\
                         CTATGATAGGATAGGTTGG'))
 
 # returns (225, 229, 224, 224)
+
+
+# Another faster, shorter solution
+'''
+def count_nucleotides(seq):
+    return seq.count("A"), seq.count("C"), seq.count("G"), seq.count("T")
+'''
