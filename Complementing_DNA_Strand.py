@@ -1,0 +1,34 @@
+
+def dna_complementation(seq:str):
+
+    seq = [nuc for nuc in seq]
+
+    for i in range(len(seq)):
+        if seq[i] == 'A':
+            seq[i] = 'T'
+        elif seq[i] == 'T':
+            seq[i] = 'A'
+        elif seq[i] == 'C':
+            seq[i] = 'G'
+        elif seq[i] == 'G':
+            seq[i] = 'C'
+
+    seq = ''.join(seq)
+    return seq[::-1]
+
+print(dna_complementation('CCTCTCAGTAGAGGTAAAGGACCCGTTGCCTAGCACCACGGTGACCTACACG\
+                          CGTAATTTCTCTTTCGTTCGCCTCGATACCGATCTGTTTAGTGCTAATGTGCT\
+                          AATGACAATACAACCACGGTTCAGGCTAGATGGAGACACCCGACACATTACTA\
+                          ATCCGACATTCGACATTGTTATCACGATGAGATAATATCGGGAACACTCTATG\
+                          GCGAGGAGTTACTATTAAGCCACGGCTTCTCGTACATTAAGCCCATTGCCGGG\
+                          GATACCTTCGTTAAAACGTAGCTGAGCACGAGGCGCTCAGAACGATAGCGGAC\
+                          TGCACTCCCGTACGACGTGACTCGCCTCAGATAGAATACCACCTTGATGTGTA\
+                          CTGCCTTGTTACGTGCAGAAATACGATCTCATTTCGCAATGTATGCTCTGATC\
+                          AGACTCAGTGATGTTCTCCCTTCTGGCCATCTCCCTTGGCAGACTTTGAGTGT\
+                          TGTTAGTAAACAGTTAGCGAGATAGGACAGGCAGCCAAAGTCCTACAATACCT\
+                          AGCACGCAAGCAAGTCCACGGCGTCATGCCACTGCTATCCTGAATGGAGGCAA\
+                          TTTGGTTCTTCGCCTACTAACCCTGTCCCGCCCGTCTAAACGTATTCAACGAC\
+                          TAGCGGGATTGACCCGGTGGCATTCGACGGAAATAACCCAGCTTATAAACGAT\
+                          AAAATAACCACCCAATTGGTTTAAATAGTGCGATTTTGTATCCGGGCTTCTCC\
+                          CCCTAACGCGGCATATATACATATGGAGAGCCCAGACAGGTCAGGTACGCCGT\
+                          TATCGCGCAAAAAGTTATACGTTTCGTCGGTG'))
