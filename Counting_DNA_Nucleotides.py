@@ -1,5 +1,5 @@
 # First solution
-def count_nucleotides(seq:list):
+def count_nucleotides(seq:str):
 
     nuc_dict = {"A":0, "C":0, "G":0, "T":0}
 
