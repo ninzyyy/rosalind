@@ -1,0 +1,14 @@
+
+def mendels_first_law(k:int, m:int, n:int):
+
+    total = k + m + n # NN + Nn + nn
+
+    P_rec = (n / total) * ((n - 1)/(total - 1)) # (nn x nn)
+    P_hetero = (m / total) * ((m - 1)/(total - 1)) # (Nn x Nn)
+    P_hetero_rec = (m / total) * (n / (total - 1)) + (n / total) * (m / (total - 1)) # (Nn x nn) or (nn x Nn)
+
+    recessive = P_rec + 0.25 * P_hetero + 0.5 * P_hetero_rec # (nn x nn) + 0.25(Nn x Nn) + 0.5(Nn x nn)
+    return 1 - recessive
+
+print(mendels_first_law(2,2,2))
+# returns 0.7833333333333333
