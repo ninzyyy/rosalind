@@ -1,14 +1,7 @@
 
 def countPointMut(seq1:str, seq2:str):
 
-    counter = 0
+    return sum([a!=b for a, b in zip(seq1, seq2)]) # Sums a list of True/False (1/0) matches
 
-    for x, y in zip(seq1, seq2):
-        if x != y:
-            counter += 1
-        else:
-            continue
-
-    return counter
 
 print(countPointMut('GAGCCTACTAACGGGAT','CATCGTAATGACGGCCT'))
