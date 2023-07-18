@@ -5,9 +5,9 @@ def mortalRabbits(months, lifespan):
 
     for i in range(months-1): #every month except initial
 
-        newborn_rabbits = sum(generations[1:]) #every gen > 1
+        newborn_rabbits = sum(generations[1:]) # sum of every gen except initial
 
-        generations = [newborn_rabbits] + generations[:-1]
+        generations = [newborn_rabbits] + generations[:-1] # creates new initial gen and shifts every other gen "off the list" each month
 
     return sum(generations)
 
